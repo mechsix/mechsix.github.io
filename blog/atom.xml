@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mechsix.github.io/blog</id>
+    <title>Mech Tsai Blog</title>
+    <updated>2021-09-25T07:30:34.354Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://mechsix.github.io/blog"/>
+    <subtitle>Mech Tsai Blog</subtitle>
+    <icon>https://mechsix.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Portal]]></title>
+        <id>welcome</id>
+        <link href="https://mechsix.github.io/blog/welcome"/>
+        <updated>2021-09-25T07:30:34.354Z</updated>
+        <summary type="html"><![CDATA[Portal]]></summary>
+        <author>
+            <name>Mech Tsai</name>
+            <uri>https://mechsix.github.io</uri>
+        </author>
+    </entry>
+</feed>

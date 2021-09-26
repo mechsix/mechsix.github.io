@@ -1,153 +1,18 @@
-<!DOCTYPE html>
-<html>
-    <head>
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-
-<title>Mechanic Inside</title>
-
-
-<link rel="stylesheet" href="/styles/main.css">
-
-
-    <meta name="generator" content="Hexo 5.3.0"></head>
-    <body>
-        <div class="container">
-            <header>
-<div class="main">
-<div class="title">
-    <a href="#" class="logo">Mechanic Inside</a>
-</div>
-<div class="site-nav">
-    <ul id="menu" class="menu">
-    
-        <li class="menu-item text-underline">
-            <a href="/">Home</a>
-        </li>
-            
-    </ul>
-</div>
-</div>
-</header>
-            <main class="main">
-                <section class="posts clearfix">
-    <div class="posts-wrapper">
-    
-        <article class="post article-entry">
-            <div class="post-title">
-                <a class="post-title-link text-underline" href="/post/aws-saa-efs/">AWS EFS</a>
-            </div>
-            <p class="sub">1月 15 2021</p>
-            <div class="post-content">
-                <h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><ul>
-<li>NFS service</li>
-<li>能夠撐數千個連線，大小可以到PB</li>
-<li>2020 Support到NFSv4</li>
-<li>資料在同一個region內被跨AZ存放</li>
-<li>Read After Write Consistency</li>
-</ul>
-<h1 id="Throughput-Modes"><a href="#Throughput-Modes" class="headerlink" title="Throughput Modes"></a>Throughput Modes</h1><h3 id="Busting-Throughput"><a href="#Busting-Throughput" class="headerlink" title="Busting Throughput"></a>Busting Throughput</h3><ul>
-<li>容量可以隨著使用情形增長</li>
-<li>存的檔案越多，效能會越低</li>
-<li>增長速度被Credit控制，如果增長速度超過預期，需要提交申請</li>
-</ul>
-<h3 id="Provision-Throughput"><a href="#Provision-Throughput" class="headerlink" title="Provision Throughput"></a>Provision Throughput</h3><ul>
-<li>效能較高，較貴</li>
-<li>不會自動增長，如果存入的資料量超出去，超出的部分會進入Busting Throughput mode</li>
-</ul>
-<h1 id="加密"><a href="#加密" class="headerlink" title="加密"></a>加密</h1><ul>
-<li>儲存系統加密：透過AWS KMS金鑰政策</li>
-<li>傳輸加密：在Instance啟用TLS</li>
-</ul>
-
-            </div>
-        </article>
-    
-</div>
-<div class="side-bar">
-
-
-    <div class="avator" id="avator">
-    <div class="title">
-        <a href="#" class="text-underline">About Me</a>
-    </div>
-        <img src="avator.jpg" class="ava-img">
-        <h3 class="author">Mech Tsai</h3>
-        <div class="icon-list">
-        <a href=""><i class="iconfont icon-weibo icon-item"></i></a>
-        <a href=""><i class="iconfont icon-email icon-item"></i></a>
-        <a href=""><i class="iconfont icon-github icon-item"></i></a>
-        <a href=""><i class="iconfont icon-linkedin icon-item"></i></a>
-        </div>
-    <div class="tags">
-    <h3 class="tags-title">Tags</h3>
-    
-</div>
-    </div>
-</div>
-
-</section>
-
-
-
-            </main>
-            <div class="copyright">
-  <div class="text">Powered By
-    <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/zjx137/hexo-theme-Tsu">Tsu</a> &copy 2019
-  </div>
-</div>
-
-        </div>
-    <div class="back-to-top" id="back-to-top">
-            <i class="iconfont icon-up"></i>
-    </div>
-        
-    </body>
-    
-<script src="/js/jquery-3.3.1.min.js"></script>
-
-    
-<script src="/js/back-to-top.js"></script>
-
-    
-<script src="/js/scroll.js"></script>
-
-    <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-    "HTML-CSS": { 
-        preferredFont: "TeX", 
-        availableFonts: ["STIX","TeX"], 
-        linebreaks: { automatic:true }, 
-        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) 
-    },
-    tex2jax: { 
-        inlineMath: [ ["$", "$"], ["\\(","\\)"] ], 
-        processEscapes: true, 
-        ignoreClass: "tex2jax_ignore|dno",
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    },
-    TeX: {  
-        equationNumbers: { autoNumber: "AMS" },
-        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, 
-        Macros: { href: "{}" } 
-    },
-    messageStyle: "none"
-    }); 
-</script>
-<!-- 给MathJax元素添加has-jax class -->
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-<!-- 通过连接CDN加载MathJax的js代码 -->
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="generator" content="Docusaurus v2.0.0-beta.6">
+<link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Mech Tsai Blog RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="Mech Tsai Blog Atom Feed"><title data-react-helmet="true">Mech Tsai | Mech Tsai</title><meta data-react-helmet="true" property="og:title" content="Mech Tsai | Mech Tsai"><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" name="description" content="Description will go into a meta tag in &lt;head /&gt;"><meta data-react-helmet="true" property="og:description" content="Description will go into a meta tag in &lt;head /&gt;"><meta data-react-helmet="true" property="og:url" content="https://mechsix.github.io/"><meta data-react-helmet="true" name="docusaurus_locale" content="en"><meta data-react-helmet="true" name="docusaurus_tag" content="default"><link data-react-helmet="true" rel="shortcut icon" href="/img/favicon.ico"><link data-react-helmet="true" rel="canonical" href="https://mechsix.github.io/"><link data-react-helmet="true" rel="alternate" href="https://mechsix.github.io/" hreflang="en"><link data-react-helmet="true" rel="alternate" href="https://mechsix.github.io/" hreflang="x-default"><script data-react-helmet="true">function maybeInsertBanner(){window.__DOCUSAURUS_INSERT_BASEURL_BANNER&&insertBanner()}function insertBanner(){var n=document.getElementById("docusaurus-base-url-issue-banner-container");if(n){n.innerHTML='\n<div id="docusaurus-base-url-issue-banner" style="border: thick solid red; background-color: rgb(255, 230, 179); margin: 20px; padding: 20px; font-size: 20px;">\n   <p style="font-weight: bold; font-size: 30px;">Your Docusaurus site did not load properly.</p>\n   <p>A very common reason is a wrong site <a href="https://docusaurus.io/docs/docusaurus.config.js/#baseurl" style="font-weight: bold;">baseUrl configuration</a>.</p>\n   <p>Current configured baseUrl = <span style="font-weight: bold; color: red;">/</span>  (default value)</p>\n   <p>We suggest trying baseUrl = <span id="docusaurus-base-url-issue-banner-suggestion-container" style="font-weight: bold; color: green;"></span></p>\n</div>\n';var e=document.getElementById("docusaurus-base-url-issue-banner-suggestion-container"),s=window.location.pathname,r="/"===s.substr(-1)?s:s+"/";e.innerHTML=r}}window.__DOCUSAURUS_INSERT_BASEURL_BANNER=!0,document.addEventListener("DOMContentLoaded",maybeInsertBanner)</script><link rel="stylesheet" href="/assets/css/styles.a24977c7.css">
+<link rel="preload" href="/assets/js/runtime~main.82c28893.js" as="script">
+<link rel="preload" href="/assets/js/main.3e0f1761.js" as="script">
+</head>
+<body>
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()</script><div id="__docusaurus">
+<div id="docusaurus-base-url-issue-banner-container"></div><div><a href="#" class="skipToContent_1oUP">Skip to main content</a></div><nav class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Navigation bar toggle" class="navbar__toggle clean-btn" type="button" tabindex="0"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><img src="/img/logo.svg" alt="Site Logo" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo"><img src="/img/logo.svg" alt="Site Logo" class="themedImage_1VuW themedImage--dark_hz6m navbar__logo"><b class="navbar__title">Mech6</b></a><a class="navbar__item navbar__link" href="/blog">Blog</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/mechsix" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link"><span>GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_3J9K"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></span></a><div class="react-toggle toggle_3Zt9 react-toggle--disabled"><div class="react-toggle-track" role="button" tabindex="-1"><div class="react-toggle-track-check"><span class="toggle_71bT">🌜</span></div><div class="react-toggle-track-x"><span class="toggle_71bT">🌞</span></div><div class="react-toggle-thumb"></div></div><input type="checkbox" class="react-toggle-screenreader-only" aria-label="Switch between dark and light mode"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div class="main-wrapper"><button>Click Me</button><p>(0)</p></div><footer class="footer footer--dark"><div class="container"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2021 Mech Tsai. Built with Docusaurus.</div></div></div></footer></div>
+<script src="/assets/js/runtime~main.82c28893.js"></script>
+<script src="/assets/js/main.3e0f1761.js"></script>
+</body>
 </html>
