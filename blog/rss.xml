@@ -4,14 +4,14 @@
         <title>Mech Tsai Blog</title>
         <link>https://mechsix.github.io/blog</link>
         <description>Mech Tsai Blog</description>
-        <lastBuildDate>Sat, 25 Sep 2021 07:30:34 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 22 Oct 2021 09:44:37 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
             <title><![CDATA[Portal]]></title>
             <link>https://mechsix.github.io/blog/welcome</link>
             <guid>welcome</guid>
-            <pubDate>Sat, 25 Sep 2021 07:30:34 GMT</pubDate>
+            <pubDate>Fri, 22 Oct 2021 09:44:37 GMT</pubDate>
             <description><![CDATA[Portal]]></description>
         </item>
     </channel>
