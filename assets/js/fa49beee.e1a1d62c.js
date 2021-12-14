@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmechsix_github_io_source=self.webpackChunkmechsix_github_io_source||[]).push([[9074],{75148:function(e){e.exports=JSON.parse('{"name":"BST","permalink":"/docs/tags/bst","docs":[{"id":"leetcode/range_sum_bst","title":"938. Range Sum of BST","description":"Python","permalink":"/docs/leetcode/range_sum_bst"}],"allTagsPath":"/docs/tags"}')}}]);
