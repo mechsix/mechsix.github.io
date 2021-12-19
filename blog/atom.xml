@@ -8,11 +8,11 @@
     <subtitle>Mech Tsai Blog</subtitle>
     <icon>https://mechsix.github.io/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[Portal]]></title>
-        <id>welcome</id>
-        <link href="https://mechsix.github.io/blog/welcome"/>
+        <title type="html"><![CDATA[Process DateTime in a Web Application]]></title>
+        <id>Process DateTime</id>
+        <link href="https://mechsix.github.io/blog/Process DateTime"/>
         <updated>2021-09-25T07:30:34.354Z</updated>
-        <summary type="html"><![CDATA[Portal]]></summary>
+        <summary type="html"><![CDATA[Overview]]></summary>
         <author>
             <name>Mech Tsai</name>
             <uri>https://mechsix.github.io</uri>

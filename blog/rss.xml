@@ -8,11 +8,11 @@
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
-            <title><![CDATA[Portal]]></title>
-            <link>https://mechsix.github.io/blog/welcome</link>
-            <guid>welcome</guid>
+            <title><![CDATA[Process DateTime in a Web Application]]></title>
+            <link>https://mechsix.github.io/blog/Process DateTime</link>
+            <guid>Process DateTime</guid>
             <pubDate>Sat, 25 Sep 2021 07:30:34 GMT</pubDate>
-            <description><![CDATA[Portal]]></description>
+            <description><![CDATA[Overview]]></description>
         </item>
     </channel>
 </rss>
