@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Mech Tsai Blog</title>
         <link>https://mechsix.github.io/blog</link>
@@ -13,6 +13,30 @@
             <guid>Process DateTime</guid>
             <pubDate>Sat, 25 Sep 2021 07:30:34 GMT</pubDate>
             <description><![CDATA[Overview]]></description>
+            <content:encoded><![CDATA[<h2>Overview</h2><h3>Is a day 24hr?</h3><p>假設我們現在要做一個功能是，在頁面載入時打個Ajax call到後端，取得昨天的post呈現在畫面上</p><p>有什麼需要考慮的？也許類似下面這樣：</p><pre><code class="language-javascript" metastring="title=&quot;frontend.js&quot;" title="&quot;frontend.js&quot;">fetch(&#x27;http://backend.com/api/yesterday-post&#x27;)
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(data) {
+    $(&#x27;target-pre&#x27;).html(data);
+  });
+</code></pre><pre><code class="language-javascript" metastring="title=&quot;backend.js&quot;" title="&quot;backend.js&quot;">async function (req, res) {
+    const endTime = new Date()
+    const starTime = new Date(endTime.getTime() - 24 * 60 * 60 * 1000)
+    const posts = await Post.find({
+        createdAt: {
+            $gte: `${startTime.getFullYear()}-${startTime.getMonth()}-${startTime.getDate()} 00:00:00`
+            $lte: `${endTime.getFullYear()}-${endTime.getMonth()}-${endTime.getDate()} 00:00:00`
+        }
+    })
+    res.json(posts)
+}
+</code></pre><p>看起來應該沒什麼問題？</p><p><code>endTime</code>是由Server決定的，所以不會受到前端使用者本地時間的影響，
+然後拿<code>endTime</code>減去24hr取得gte，去跟資料庫拿出這個區間的資料回給前端顯示在畫面上。所有往資料庫的輸入都是後端決定的，也沒有被inject等安全疑慮</p><p><strong>但其實這隻程式在很多國家，一年會壞個兩次</strong></p><p>因為每年有個那麼兩天，在很多國家並不是24小時 - Dalight Saving切換的那兩天。 例如2021年來說，在美國東岸(EST)</p><ul><li>Mar 14, 2021 01:59:59 的下一秒鐘是 03:00:00</li><li>Nov 7, 2021 02:00:00 的下一秒鐘也還是 02:00:00</li></ul><p>於是Mar 14只有23hr，Nov 7卻有25hr，
+只要你的程式被執行的當下，往前算24hr會經過這個被切換的小時的話，被從資料庫抓出來的資料就會多或少一個小時的量</p><h2>Frontend</h2><pre><code class="language-javascript">new Date()
+new Date(&#x27;2021-01-01&#x27;)
+</code></pre><h2>Backend</h2><h3>Node</h3><p>Date(), Moment.js</p><h3>Python</h3><p>pytz</p><h3>PHP</h3><p>Carbon</p><h2>Operation System</h2><h2>Database</h2><h2>Transfer between layers</h2><h3>SSoT</h3><p>在Web Application中，同一份資料在不同的程式之間傳遞是再常見不過的事
+但傳遞過程中因為格式轉換、傳輸延遲延遲差異、甚至是錯誤的implementation，都有可能導致同一份資料有不同的表現</p><p>Single Source of Truth (SSoT)的概念指的是：哪一份資料是最具權威性的</p><h3>Scenarios</h3><ul><li>Created At</li><li>Received At</li><li>Query between</li></ul><h2>References</h2>]]></content:encoded>
         </item>
     </channel>
 </rss>
