@@ -4,14 +4,14 @@
         <title>Mech Tsai Blog</title>
         <link>https://mechsix.github.io/blog</link>
         <description>Mech Tsai Blog</description>
-        <lastBuildDate>Thu, 23 Dec 2021 18:13:50 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 21 Dec 2021 16:40:22 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
             <title><![CDATA[Process DateTime in a Web Application]]></title>
             <link>https://mechsix.github.io/blog/Process DateTime</link>
             <guid>Process DateTime</guid>
-            <pubDate>Thu, 23 Dec 2021 18:13:50 GMT</pubDate>
+            <pubDate>Tue, 21 Dec 2021 16:40:22 GMT</pubDate>
             <description><![CDATA[Overview]]></description>
             <content:encoded><![CDATA[<h2>Overview</h2><h3>Is a day 24hr?</h3><p>假設我們現在要做一個功能是，在頁面載入時打個Ajax call到後端，取得昨天的post呈現在畫面上</p><p>有什麼需要考慮的？也許類似下面這樣：</p><pre><code class="language-javascript" metastring="title=&quot;frontend.js&quot;" title="&quot;frontend.js&quot;">fetch(&#x27;http://backend.com/api/yesterday-post&#x27;)
   .then(function(response) {
