@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmechsix_github_io_source=self.webpackChunkmechsix_github_io_source||[]).push([[1284],{66876:function(e){e.exports=JSON.parse('{"name":"BFS","permalink":"/docs/tags/bfs","docs":[{"id":"leetcode/same_tree","title":"100. Same Tree","description":"Python","permalink":"/docs/leetcode/same_tree"}],"allTagsPath":"/docs/tags"}')}}]);
