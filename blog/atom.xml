@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mechsix.github.io/blog</id>
     <title>Mech Tsai Blog</title>
-    <updated>2022-01-15T10:05:20.612Z</updated>
+    <updated>2022-01-16T15:24:24.168Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mechsix.github.io/blog"/>
     <subtitle>Mech Tsai Blog</subtitle>
@@ -11,9 +11,9 @@
         <title type="html"><![CDATA[一天是24小時嗎？談Web Application的DateTime處理]]></title>
         <id>一天是24小時嗎？談Web Application的DateTime處理</id>
         <link href="https://mechsix.github.io/blog/一天是24小時嗎？談Web Application的DateTime處理"/>
-        <updated>2022-01-15T10:05:20.612Z</updated>
+        <updated>2022-01-16T15:24:24.168Z</updated>
         <summary type="html"><![CDATA[概述]]></summary>
-        <content type="html"><![CDATA[<h2>概述</h2><p>DateTime(日期時間)的處理在現代的應用程式中很常見，但身為開發者，軟體工程師的工作做個幾年，總有那麼幾次會栽在DateTime的處理問題上。就日期來說，年要潤與不潤，月是大月小月，雖然都有一定規則可循，但其中的複雜度在開發應用程式時有時程壓力下，要能夠處理得好也不是太容易的事。</p><p>本文會以Web Applicatin為範例，簡述幾個DateTime處理上可能遇到的問題，及該思考的點</p><h2>一天的24小時</h2><p>所以一天不是24小時嗎？</p><p>我們這裡談的不是天文上所說的，一天略等於24.25小時的問題。
+        <content type="html"><![CDATA[<h2>概述</h2><p>DateTime(日期時間)的處理在現代的應用程式中很常見，但身為開發者，軟體工程師的工作做個幾年，總有那麼幾次會栽在DateTime的處理問題上。就日期來說，年要潤與不潤，月是大月小月，雖然都有一定規則可循，但其中的複雜度在開發應用程式時有時程壓力下，要能夠處理得好也不是太容易的事。</p><p>本文會以Web Applicatin為範例，簡述幾個DateTime處理上可能遇到的問題，及該思考的點</p><h2>問題</h2><h3>一天24小時</h3><p>我們這裡談的不是天文上所說的，一天略等於24.25小時的問題。
 而是指在已經被廣泛使用，早已考慮閏年問題的的<a href="https://zh.wikipedia.org/wiki/%E6%A0%BC%E9%87%8C%E6%9B%86">格里曆</a>在現在電腦系統中，處理小時與日期轉換時是否可以將一天當作24小時來處理的問題</p><p>舉個例子來說，有個功能，由前端向後端發出請求取得過去一天的資料顯示在畫面上，一個初步的想法大概會是：</p><ol><li>由前端向後端發起請求</li><li>後端收到請求時以server的時間為準取得當下時間Now作為lte(less than or equal)</li><li>拿lte減去24hr作為gte (greater than or equal)</li></ol><p>以Javascript寫起來大概是這樣</p><pre><code class="language-javascript" metastring="title=&quot;frontend.js&quot;" title="&quot;frontend.js&quot;">fetch(&#x27;http://backend.com/api/yesterday-post&#x27;)
   .then(function(response) {
     return response.json();
@@ -33,7 +33,7 @@
     res.json(posts)
 }
 </code></pre><p>看起來應該沒什麼問題？</p><p><code>endTime</code>是由Server決定的，所以不會受到前端使用者本地時間的影響，所以這隻程式不需擔心使用者電腦校時有沒有問題</p><p>接著拿<code>endTime</code>減去24hr取得gte，去跟資料庫拿出這個區間的資料回給前端顯示在畫面上。所有往資料庫的輸入都是同一台機器，也就是後端決定的，也沒有被inject等安全疑慮</p><p><strong>但其實這隻程式在很多國家，一年會壞個兩次</strong></p><p>因為每年有個那麼兩天，在很多國家並不是24小時 - 日光節約(Dalight Saving)切換的那兩天。</p><p>例如以2021年來說，在美國東部標準時間(EST)</p><ul><li>Mar 14, 2021 01:59:59 的下一秒鐘是 03:00:00，日光節約結束</li><li>Nov 7, 2021 02:00:00 的下一秒鐘也還是 02:00:00，日光節約開始</li></ul><p>於是在2021年的美國，Mar 14只有23小時，而Nov 7卻有25個小時
-只要你的程式被執行的當下，往前算24小時會經過這個被切換的小時的話，被從資料庫抓出來的資料就會多或少一個小時的資料</p><h2>DMY與MDY</h2><h2>SSoT</h2><p>在繼續討論前，有必要提一下SSoT (Single Source of Truth)的概念</p><p>資料在不同的process與不同的機器間傳遞，過程中因為格式轉換、傳輸延遲、避免被篡改的安全考量、甚至是錯誤的實作(Bug)，都有可能導致同一份資料在不同的時間或地方而有不同的值</p><p>舉例來說，前端的14:00，在後端因為時區不同或是主機的時間校正有問題有可能是13:01</p><p>SSoT的概念指的是：到底哪一份資料是最具權威性的？在資料有落差的時候可以以它為準？</p><p>要能夠正確的處理DateTime，識別哪一份資料是SSoT是最重要的一個步驟</p><h2>兩種情境</h2><p>若以3-tier的Web Application來討論，三個最主要產生資料落差的SSoT候選人就是那三個tier。</p><ol><li>Frontend</li><li>Backend</li><li>Database</li></ol><p>在不同的情境下，SSoT可能會在不同的地方</p><h3>建立的情境</h3><p>在建立資料的情境，例如說前端按下submit，後端收到請求後往資料庫建立資料，這筆資料的Create Time的SSoT會是以誰為基準？</p><p>前端可以先排除，畢竟前端的立場是『送出請求』，加上來自前端的資料可能被篡改並不可信，並沒辦法作為SSoT</p><p>後端以接收到請求的時間為準，看起來是個選項</p><h3>查詢的情境</h3><p>使用者在前端送出&quot;查詢的條件&quot;，被查詢的資料則是以資料庫內的為準</p><p>也就是說，查詢的SSoT來自前端；回應的資料SSoT是資料庫</p><h2>Frontend</h2><pre><code class="language-javascript">new Date()
+只要你的程式被執行的當下，往前算24小時會經過這個被切換的小時的話，被從資料庫抓出來的資料就會多或少一個小時的資料</p><h3>DMY與YMD</h3><p>不同國家對於日期格式的使用有不同的使用習慣，1/3是指Mar 1st，還是Jan 3rd真的要處理的對也不容易。</p><p>例如下面這張從<a href="https://en.wikipedia.org/wiki/Date_format_by_country">Wiki</a>來的圖，<span style="color:#0ff">青色</span>用的是DMY；<span style="color:#ff0">黃色</span>用的是YMD，而<span style="color:#0f0">綠色</span>的國家則是混用，導致很多時候開發系統時就是時間成本考量，用<em>不會有跨國使用需求</em>這個理由給他準過去，但身為工程師，處理這件事有沒有更好的方法？</p><p><img src="./process-datetime/date-format-country.png" alt="DD"/></p><h2>SSoT</h2><p>在繼續討論前，有必要提一下SSoT (Single Source of Truth)的概念</p><p>資料在不同的process與不同的機器間傳遞，過程中因為格式轉換、傳輸延遲、避免被篡改的安全考量、甚至是錯誤的實作(Bug)，都有可能導致同一份資料在不同的時間或地方而有不同的值</p><p>舉例來說，前端的14:00，在後端因為時區不同或是主機的時間校正有問題有可能是13:01</p><p>SSoT的概念指的是：到底哪一份資料是最具權威性的？在資料有落差的時候可以以它為準？</p><p>要能夠正確的處理DateTime，識別哪一份資料是SSoT是最重要的一個步驟</p><h2>兩種情境</h2><p>若以3-tier的Web Application來討論，三個最主要產生資料落差的SSoT候選人就是那三個tier。</p><ol><li>Frontend</li><li>Backend</li><li>Database</li></ol><p>在不同的情境下，SSoT可能會在不同的地方</p><h3>建立的情境</h3><p>在建立資料的情境，例如說前端按下submit，後端收到請求後往資料庫建立資料，這筆資料的Create Time的SSoT會是以誰為基準？</p><p>前端可以先排除，畢竟前端的立場是『送出請求』，加上來自前端的資料可能被篡改並不可信，並沒辦法作為SSoT</p><p>後端以接收到請求的時間為準，看起來是個選項</p><h3>查詢的情境</h3><p>使用者在前端送出&quot;查詢的條件&quot;，被查詢的資料則是以資料庫內的為準</p><p>也就是說，查詢的SSoT來自前端；回應的資料SSoT是資料庫</p><h2>Frontend</h2><pre><code class="language-javascript">new Date()
 new Date(&#x27;2021-01-01&#x27;)
 </code></pre><h2>Creation &amp; Query</h2><h2>How to?</h2><p>FE, BE, DB</p><h2>Transfer with spec, process as object</h2><ul><li>Node: Date(), Moment.js</li><li>Python: pytz</li><li>PHP: Carbon</li></ul><h3>Scenarios</h3><ul><li>Created At</li><li>Received At</li><li>Query between</li></ul><h2>References</h2>]]></content>
         <author>
