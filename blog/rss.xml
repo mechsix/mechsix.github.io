@@ -4,14 +4,14 @@
         <title>Mech Tsai Blog</title>
         <link>https://mechsix.github.io/blog</link>
         <description>Mech Tsai Blog</description>
-        <lastBuildDate>Tue, 25 Jan 2022 12:33:32 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 25 Jan 2022 12:47:12 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
             <title><![CDATA[一天是24小時嗎？談Web Application的DateTime處理]]></title>
             <link>https://mechsix.github.io/blog/一天是24小時嗎？談Web Application的DateTime處理</link>
             <guid>一天是24小時嗎？談Web Application的DateTime處理</guid>
-            <pubDate>Tue, 25 Jan 2022 12:33:32 GMT</pubDate>
+            <pubDate>Tue, 25 Jan 2022 12:47:12 GMT</pubDate>
             <description><![CDATA[概述]]></description>
             <content:encoded><![CDATA[<h2>概述</h2><p>DateTime(日期時間)的處理在現代的應用程式中很常見，但身為開發者，軟體工程師的工作做個幾年，總有那麼幾次會栽在DateTime的處理問題上。就日期來說，年要潤與不潤，月是大月小月，雖然都有一定規則可循，但其中的複雜度在開發應用程式時有時程壓力下，要能夠處理得好也不是太容易的事。</p><p>本文會以Web Applicatin為範例，簡述幾個DateTime處理上可能遇到的問題，及該思考的點</p><h2>問題</h2><h3>一天24小時</h3><p>我們這裡談的不是天文上所說的，一天略等於24.25小時的問題。
 而是指在已經被廣泛使用，早已考慮閏年問題的的<a href="https://zh.wikipedia.org/wiki/%E6%A0%BC%E9%87%8C%E6%9B%86">格里曆</a>在現在電腦系統中，處理小時與日期轉換時是否可以將一天當作24小時來處理的問題</p><p>舉個例子來說，有個功能，由前端向後端發出請求取得過去一天的資料顯示在畫面上，一個初步的想法大概會是：</p><ol><li>由前端向後端發起請求</li><li>後端收到請求時以server的時間為準取得當下時間Now作為lte(less than or equal)</li><li>拿lte減去24hr作為gte (greater than or equal)</li></ol><p>以Javascript寫起來大概是這樣</p><pre><code class="language-javascript" metastring="title=&quot;frontend.js&quot;" title="&quot;frontend.js&quot;">fetch(&#x27;http://backend.com/api/yesterday-post&#x27;)
