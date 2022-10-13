@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmechsix_github_io_source=self.webpackChunkmechsix_github_io_source||[]).push([[15653],{86902:function(e){e.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/develop-practice","name":"Develop Practice","count":1,"permalink":"/blog/tags/develop-practice"}')}}]);
