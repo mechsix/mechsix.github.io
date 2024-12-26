@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mechsix.github.io/blog</id>
     <title>Mech Tsai Blog</title>
-    <updated>2024-06-05T16:01:10.000Z</updated>
+    <updated>2024-12-26T22:08:55.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mechsix.github.io/blog"/>
     <subtitle>Mech Tsai Blog</subtitle>
@@ -11,7 +11,7 @@
         <title type="html"><![CDATA[一天24小時？談DateTime處理]]></title>
         <id>https://mechsix.github.io/blog/一天24小時？談DateTime處理</id>
         <link href="https://mechsix.github.io/blog/一天24小時？談DateTime處理"/>
-        <updated>2024-06-05T16:01:10.000Z</updated>
+        <updated>2024-12-26T22:08:55.000Z</updated>
         <summary type="html"><![CDATA[概述]]></summary>
         <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="概述">概述<a href="https://mechsix.github.io/blog/%E4%B8%80%E5%A4%A924%E5%B0%8F%E6%99%82%EF%BC%9F%E8%AB%87DateTime%E8%99%95%E7%90%86#%E6%A6%82%E8%BF%B0" class="hash-link" aria-label="Direct link to 概述" title="Direct link to 概述">​</a></h2>
 <p>DateTime的處理，在開發應用程式時很常見，但身為開發者一陣子，總有那麼幾次會栽在DateTime的處理問題上。就日期來說，年要潤與不潤，月是大月小月，這雖然都有一定規則可循，但其中的複雜度在開發應用程式時有時程壓力下，要能夠處理得好也不是太容易的事。</p>
