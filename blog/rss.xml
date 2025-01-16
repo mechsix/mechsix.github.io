@@ -4,7 +4,7 @@
         <title>Mech Tsai Blog</title>
         <link>https://mechsix.github.io/blog</link>
         <description>Mech Tsai Blog</description>
-        <lastBuildDate>Thu, 26 Dec 2024 22:08:55 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 16 Jan 2025 14:58:23 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,9 +12,10 @@
             <title><![CDATA[一天24小時？談DateTime處理]]></title>
             <link>https://mechsix.github.io/blog/一天24小時？談DateTime處理</link>
             <guid>https://mechsix.github.io/blog/一天24小時？談DateTime處理</guid>
-            <pubDate>Thu, 26 Dec 2024 22:08:55 GMT</pubDate>
-            <description><![CDATA[概述]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="概述">概述<a href="https://mechsix.github.io/blog/%E4%B8%80%E5%A4%A924%E5%B0%8F%E6%99%82%EF%BC%9F%E8%AB%87DateTime%E8%99%95%E7%90%86#%E6%A6%82%E8%BF%B0" class="hash-link" aria-label="Direct link to 概述" title="Direct link to 概述">​</a></h2>
+            <pubDate>Thu, 16 Jan 2025 14:58:23 GMT</pubDate>
+            <description><![CDATA[{/ truncate /}]]></description>
+            <content:encoded><![CDATA[
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="概述">概述<a href="https://mechsix.github.io/blog/%E4%B8%80%E5%A4%A924%E5%B0%8F%E6%99%82%EF%BC%9F%E8%AB%87DateTime%E8%99%95%E7%90%86#%E6%A6%82%E8%BF%B0" class="hash-link" aria-label="Direct link to 概述" title="Direct link to 概述">​</a></h2>
 <p>DateTime的處理，在開發應用程式時很常見，但身為開發者一陣子，總有那麼幾次會栽在DateTime的處理問題上。就日期來說，年要潤與不潤，月是大月小月，這雖然都有一定規則可循，但其中的複雜度在開發應用程式時有時程壓力下，要能夠處理得好也不是太容易的事。</p>
 <p>本文會以Web Application為範例，簡述幾個DateTime處理上可能遇到的問題，及處理方式。</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="問題">問題<a href="https://mechsix.github.io/blog/%E4%B8%80%E5%A4%A924%E5%B0%8F%E6%99%82%EF%BC%9F%E8%AB%87DateTime%E8%99%95%E7%90%86#%E5%95%8F%E9%A1%8C" class="hash-link" aria-label="Direct link to 問題" title="Direct link to 問題">​</a></h2>
@@ -51,7 +52,7 @@
 <li>黃色：YMD</li>
 <li>綠色：混用</li>
 </ul>
-<p><img loading="lazy" alt="DD" src="https://mechsix.github.io/assets/images/date-format-country-b9807abd5416e7ade7b58478f1e80c3c.png" width="700" height="355" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="DD" src="https://mechsix.github.io/assets/images/date-format-country-b9807abd5416e7ade7b58478f1e80c3c.png" width="700" height="355" class="img_ev3q"></p>
 <p>要能正確格式化這些日期格式，不只是單位換算上，就連顯示格式都可能因地區不同有不同的作法。</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="所以要怎麼辦">所以要怎麼辦？<a href="https://mechsix.github.io/blog/%E4%B8%80%E5%A4%A924%E5%B0%8F%E6%99%82%EF%BC%9F%E8%AB%87DateTime%E8%99%95%E7%90%86#%E6%89%80%E4%BB%A5%E8%A6%81%E6%80%8E%E9%BA%BC%E8%BE%A6" class="hash-link" aria-label="Direct link to 所以要怎麼辦？" title="Direct link to 所以要怎麼辦？">​</a></h2>
 <p>問題我們明白了，但是要怎麼辦？有沒有一個準則或做法是能讓我們善加利用別人造好的輪子，但是在我們自己寫的應用程式中卻又能正確操作DateTime的處理？</p>
@@ -173,7 +174,7 @@
 <li>Database</li>
 </ol>
 <p>在不同的情境下，SSoT可能會在不同的地方，以下就建立與查詢的情境進行討論</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="建立的情境">建立的情境<a href="https://mechsix.github.io/blog/%E4%B8%80%E5%A4%A924%E5%B0%8F%E6%99%82%EF%BC%9F%E8%AB%87DateTime%E8%99%95%E7%90%86#%E5%BB%BA%E7%AB%8B%E7%9A%84%E6%83%85%E5%A2%83" class="hash-link" aria-label="Direct link to 建立的情境" title="Direct link to 建立的情境">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="建立的情境">建立的情境<a href="https://mechsix.github.io/blog/%E4%B8%80%E5%A4%A924%E5%B0%8F%E6%99%82%EF%BC%9F%E8%AB%87DateTime%E8%99%95%E7%90%86#%E5%BB%BA%E7%AB%8B%E7%9A%84%E6%83%85%E5%A2%83" class="hash-link" aria-label="Direct link to 建立的情境" title="Direct link to 建�立的情境">​</a></h3>
 <p>在建立資料的情境，例如說前端按下submit，後端收到請求後往資料庫建立資料，這筆資料的Create Time的SSoT會是以誰為基準？</p>
 <p>前端可以先排除，畢竟前端的立場是『送出請求』，加上來自前端的資料可能被篡改並不可信，並沒辦法作為SSoT</p>
 <p>後端以接收到請求的時間為準，看起來是個選項</p>
