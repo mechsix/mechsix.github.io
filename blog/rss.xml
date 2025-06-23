@@ -4,7 +4,7 @@
         <title>Mech Tsai Blog</title>
         <link>https://mechsix.github.io/blog</link>
         <description>Mech Tsai Blog</description>
-        <lastBuildDate>Thu, 16 Jan 2025 14:58:23 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 23 Jun 2025 23:11:50 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,7 +12,7 @@
             <title><![CDATA[一天24小時？談DateTime處理]]></title>
             <link>https://mechsix.github.io/blog/一天24小時？談DateTime處理</link>
             <guid>https://mechsix.github.io/blog/一天24小時？談DateTime處理</guid>
-            <pubDate>Thu, 16 Jan 2025 14:58:23 GMT</pubDate>
+            <pubDate>Mon, 23 Jun 2025 23:11:50 GMT</pubDate>
             <description><![CDATA[{/ truncate /}]]></description>
             <content:encoded><![CDATA[
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="概述">概述<a href="https://mechsix.github.io/blog/%E4%B8%80%E5%A4%A924%E5%B0%8F%E6%99%82%EF%BC%9F%E8%AB%87DateTime%E8%99%95%E7%90%86#%E6%A6%82%E8%BF%B0" class="hash-link" aria-label="Direct link to 概述" title="Direct link to 概述">​</a></h2>
@@ -174,7 +174,7 @@
 <li>Database</li>
 </ol>
 <p>在不同的情境下，SSoT可能會在不同的地方，以下就建立與查詢的情境進行討論</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="建立的情境">建立的情境<a href="https://mechsix.github.io/blog/%E4%B8%80%E5%A4%A924%E5%B0%8F%E6%99%82%EF%BC%9F%E8%AB%87DateTime%E8%99%95%E7%90%86#%E5%BB%BA%E7%AB%8B%E7%9A%84%E6%83%85%E5%A2%83" class="hash-link" aria-label="Direct link to 建立的情境" title="Direct link to 建�立的情境">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="建立的情境">建立的情境<a href="https://mechsix.github.io/blog/%E4%B8%80%E5%A4%A924%E5%B0%8F%E6%99%82%EF%BC%9F%E8%AB%87DateTime%E8%99%95%E7%90%86#%E5%BB%BA%E7%AB%8B%E7%9A%84%E6%83%85%E5%A2%83" class="hash-link" aria-label="Direct link to 建立的情境" title="Direct link to 建立�的情境">​</a></h3>
 <p>在建立資料的情境，例如說前端按下submit，後端收到請求後往資料庫建立資料，這筆資料的Create Time的SSoT會是以誰為基準？</p>
 <p>前端可以先排除，畢竟前端的立場是『送出請求』，加上來自前端的資料可能被篡改並不可信，並沒辦法作為SSoT</p>
 <p>後端以接收到請求的時間為準，看起來是個選項</p>

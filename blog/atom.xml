@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mechsix.github.io/blog</id>
     <title>Mech Tsai Blog</title>
-    <updated>2025-01-16T14:58:23.000Z</updated>
+    <updated>2025-06-23T23:11:50.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mechsix.github.io/blog"/>
     <subtitle>Mech Tsai Blog</subtitle>
@@ -11,7 +11,7 @@
         <title type="html"><![CDATA[一天24小時？談DateTime處理]]></title>
         <id>https://mechsix.github.io/blog/一天24小時？談DateTime處理</id>
         <link href="https://mechsix.github.io/blog/一天24小時？談DateTime處理"/>
-        <updated>2025-01-16T14:58:23.000Z</updated>
+        <updated>2025-06-23T23:11:50.000Z</updated>
         <summary type="html"><![CDATA[{/ truncate /}]]></summary>
         <content type="html"><![CDATA[
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="概述">概述<a href="https://mechsix.github.io/blog/%E4%B8%80%E5%A4%A924%E5%B0%8F%E6%99%82%EF%BC%9F%E8%AB%87DateTime%E8%99%95%E7%90%86#%E6%A6%82%E8%BF%B0" class="hash-link" aria-label="Direct link to 概述" title="Direct link to 概述">​</a></h2>
@@ -173,7 +173,7 @@
 <li>Database</li>
 </ol>
 <p>在不同的情境下，SSoT可能會在不同的地方，以下就建立與查詢的情境進行討論</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="建立的情境">建立的情境<a href="https://mechsix.github.io/blog/%E4%B8%80%E5%A4%A924%E5%B0%8F%E6%99%82%EF%BC%9F%E8%AB%87DateTime%E8%99%95%E7%90%86#%E5%BB%BA%E7%AB%8B%E7%9A%84%E6%83%85%E5%A2%83" class="hash-link" aria-label="Direct link to 建立的情境" title="Direct link to 建�立的情境">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="建立的情境">建立的情境<a href="https://mechsix.github.io/blog/%E4%B8%80%E5%A4%A924%E5%B0%8F%E6%99%82%EF%BC%9F%E8%AB%87DateTime%E8%99%95%E7%90%86#%E5%BB%BA%E7%AB%8B%E7%9A%84%E6%83%85%E5%A2%83" class="hash-link" aria-label="Direct link to 建立的情境" title="Direct link to 建立�的情境">​</a></h3>
 <p>在建立資料的情境，例如說前端按下submit，後端收到請求後往資料庫建立資料，這筆資料的Create Time的SSoT會是以誰為基準？</p>
 <p>前端可以先排除，畢竟前端的立場是『送出請求』，加上來自前端的資料可能被篡改並不可信，並沒辦法作為SSoT</p>
 <p>後端以接收到請求的時間為準，看起來是個選項</p>
