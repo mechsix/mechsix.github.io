@@ -2,8 +2,8 @@
 <html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-aws/asg" data-has-hydrated="false">
 <head>
 <meta charset="UTF-8">
-<meta name="generator" content="Docusaurus v3.7.0">
-<title data-rh="true">AutoScaling | Mech Tsai</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://mechsix.github.io/docs/aws/asg"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="AutoScaling | Mech Tsai"><meta data-rh="true" name="description" content="AWS Auto Scaling"><meta data-rh="true" property="og:description" content="AWS Auto Scaling"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://mechsix.github.io/docs/aws/asg"><link data-rh="true" rel="alternate" href="https://mechsix.github.io/docs/aws/asg" hreflang="en"><link data-rh="true" rel="alternate" href="https://mechsix.github.io/docs/aws/asg" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Mech Tsai RSS Feed">
+<meta name="generator" content="Docusaurus v3.10.2">
+<title data-rh="true">AutoScaling | Mech Tsai</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://mechsix.github.io/docs/aws/asg"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="AutoScaling | Mech Tsai"><meta data-rh="true" name="description" content="AWS Auto Scaling"><meta data-rh="true" property="og:description" content="AWS Auto Scaling"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://mechsix.github.io/docs/aws/asg"><link data-rh="true" rel="alternate" href="https://mechsix.github.io/docs/aws/asg" hreflang="en"><link data-rh="true" rel="alternate" href="https://mechsix.github.io/docs/aws/asg" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ASG","item":"https://mechsix.github.io/docs/aws/asg"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Mech Tsai RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="Mech Tsai Atom Feed">
 
 
@@ -14,145 +14,148 @@
     <!-- End Google Tag Manager -->
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.6a7be87d.css">
-<script src="/assets/js/runtime~main.4f992086.js" defer="defer"></script>
-<script src="/assets/js/main.9934ce13.js" defer="defer"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.b83f8825.css">
+<script src="/assets/js/runtime~main.ecd551a8.js" defer="defer"></script>
+<script src="/assets/js/main.5cc62702.js" defer="defer"></script>
 </head>
-<body class="navigation-with-keyboard">
-<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/icon-md.png" alt="Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/icon-md.png" alt="Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Mech6</b></a><a class="navbar__item navbar__link" href="/blog">Blog</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs">Docs</a></div><div class="navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/">Overview</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/docs/aws/apigw">AWS</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/aws/apigw">API Gateway</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/aws/asg">ASG</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/aws/dms">DMS</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/aws/ec2">EC2</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/aws/efs">EFS</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/aws/emr">EMR</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/aws/inspector">Inspector</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/aws/lambda">Lambda</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/aws/load-balancer">Load Balancer</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/aws/queues">SQS/SNS/MSK</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/aws/rds">RDS</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/aws/route53">Route53</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/aws/sts">STS</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/k8s/intro">K8S</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/cheatsheet/js-operation">Cheet Sheet</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/dev_practice/css_naming_convention">Develop Practice</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/leetcode_note/backtracking">Leetcode</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/react/nx-react">React</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/python/functools">Python</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/rust/intro">Rust</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/scripts/fbcid-trim">Script</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/typescript/env-setup">Typescript</a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">AWS</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">ASG</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>AutoScaling</h1></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="aws-auto-scaling">AWS Auto Scaling<a href="#aws-auto-scaling" class="hash-link" aria-label="Direct link to AWS Auto Scaling" title="Direct link to AWS Auto Scaling">​</a></h2>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/icon-md.png" alt="Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/icon-md.png" alt="Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Mech6</b></a><a class="navbar__item navbar__link" href="/blog">Blog</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs">Docs</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/"><span class="linkLabel_WmDU">Overview</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/docs/aws/apigw"><span class="categoryLinkLabel_W154">AWS</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/aws/apigw"><span class="linkLabel_WmDU">API Gateway</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/aws/asg"><span class="linkLabel_WmDU">ASG</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/aws/dms"><span class="linkLabel_WmDU">DMS</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/aws/ec2"><span class="linkLabel_WmDU">EC2</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/aws/efs"><span class="linkLabel_WmDU">EFS</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/aws/emr"><span class="linkLabel_WmDU">EMR</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/aws/inspector"><span class="linkLabel_WmDU">Inspector</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/aws/lambda"><span class="linkLabel_WmDU">Lambda</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/aws/load-balancer"><span class="linkLabel_WmDU">Load Balancer</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/aws/queues"><span class="linkLabel_WmDU">SQS/SNS/MSK</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/aws/rds"><span class="linkLabel_WmDU">RDS</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/aws/route53"><span class="linkLabel_WmDU">Route53</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/aws/sts"><span class="linkLabel_WmDU">STS</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/k8s/intro"><span class="categoryLinkLabel_W154">K8S</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/cheatsheet/js-operation"><span class="categoryLinkLabel_W154">Cheet Sheet</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/dev_practice/css_naming_convention"><span class="categoryLinkLabel_W154">Develop Practice</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/leetcode_note/backtracking"><span class="categoryLinkLabel_W154">Leetcode</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/react/nx-react"><span class="categoryLinkLabel_W154">React</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/python/functools"><span class="categoryLinkLabel_W154">Python</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/rust/intro"><span class="categoryLinkLabel_W154">Rust</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/scripts/fbcid-trim"><span class="categoryLinkLabel_W154">Script</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/typescript/env-setup"><span class="categoryLinkLabel_W154">Typescript</span></a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">AWS</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">ASG</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>AutoScaling</h1></header><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="aws-auto-scaling">AWS Auto Scaling<a href="#aws-auto-scaling" class="hash-link" aria-label="Direct link to AWS Auto Scaling" title="Direct link to AWS Auto Scaling" translate="no">​</a></h2>
 <ul>
-<li>管理跨多個服務的scaling，可以包含多個EC2 Auto Scaling Group</li>
-<li>Scaling Process * 是可以suspend掉的<!-- -->
+<li class="">管理跨多個服務的scaling，可以包含多個EC2 Auto Scaling Group</li>
+<li class="">Scaling Process * 是可以suspend掉的<!-- -->
 <ul>
-<li>Launch: 啟動EC2</li>
-<li>Terminate: 停止EC2</li>
-<li>HealthCheck: 檢查EC2的健康狀態</li>
-<li>ReplaceUnhealthy: 取代掉不健康的EC2</li>
-<li>AZRebalance: 平均不同AZ中的AutoScalingGroup的機器數量，以提高Availability。但可能會all healthy時候做出Terminate的動作</li>
-<li>AlarmNotification: 從CloudWatch拿到Alarm事件</li>
-<li>ScheduledActions: By Schedule的scaling rule</li>
-<li>AddToLoadBalancer: 機器起來後，確定healthy後，將其加入LoadBalancer後開始進行服務</li>
+<li class="">Launch: 啟動EC2</li>
+<li class="">Terminate: 停止EC2</li>
+<li class="">HealthCheck: 檢查EC2的健康狀態</li>
+<li class="">ReplaceUnhealthy: 取代掉不健康的EC2</li>
+<li class="">AZRebalance: 平均不同AZ中的AutoScalingGroup的機器數量，以提高Availability。但可能會all healthy時候做出Terminate的動作</li>
+<li class="">AlarmNotification: 從CloudWatch拿到Alarm事件</li>
+<li class="">ScheduledActions: By Schedule的scaling rule</li>
+<li class="">AddToLoadBalancer: 機器起來後，確定healthy後，將其加入LoadBalancer後開始進行服務</li>
 </ul>
 </li>
-<li>Health Check的種類<!-- -->
+<li class="">Health Check的種類<!-- -->
 <ul>
-<li>EC2 Status Checks</li>
-<li>ELB Health Checks (HTTP)</li>
+<li class="">EC2 Status Checks</li>
+<li class="">ELB Health Checks (HTTP)</li>
 </ul>
 </li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="aws-ec2-auto-scaling">AWS EC2 Auto Scaling<a href="#aws-ec2-auto-scaling" class="hash-link" aria-label="Direct link to AWS EC2 Auto Scaling" title="Direct link to AWS EC2 Auto Scaling">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="aws-ec2-auto-scaling">AWS EC2 Auto Scaling<a href="#aws-ec2-auto-scaling" class="hash-link" aria-label="Direct link to AWS EC2 Auto Scaling" title="Direct link to AWS EC2 Auto Scaling" translate="no">​</a></h2>
 <ul>
-<li>可以跨AZ，但不能跨Region
+<li class="">可以跨AZ，但不能跨Region
 使用情境<!-- -->
 <ul>
-<li>預先定義的scale strategy</li>
-<li>預測scaling (需要與AWS Auto Scaling一起定義)</li>
-<li>提高Availability<!-- -->
+<li class="">預先定義的scale strategy</li>
+<li class="">預測scaling (需要與AWS Auto Scaling一起定義)</li>
+<li class="">提高Availability<!-- -->
 <ul>
-<li>EC2 叢集達到高平均使用率時，以遞增方式將新的 Amazon EC2 執行個體新增到 ASG</li>
-<li>設定一個條件，在 CPU 使用率低時，以相同的量遞減移除執行個體</li>
-<li>用 Amazon CloudWatch 傳送警示以觸發擴展活動，並使用 Elastic Load Balancing (ELB) 將流量分配給 ASG 內的執行個體</li>
-<li>若負載變化是可預測的，則可透過 Amazon EC2 Auto Scaling 設定排程，以規劃您的擴展活動</li>
+<li class="">EC2 叢集達到高平均使用率時，以遞增方式將新的 Amazon EC2 執行個體新增到 ASG</li>
+<li class="">設定一個條件，在 CPU 使用率低時，以相同的量遞減移除執行個體</li>
+<li class="">用 Amazon CloudWatch 傳送警示以觸發擴展活動，並使用 Elastic Load Balancing (ELB) 將流量分配給 ASG 內的執行個體</li>
+<li class="">若負載變化是可預測的，則可透過 Amazon EC2 Auto Scaling 設定排程，以規劃您的擴展活動</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Launch Configuration (啟動組態)<!-- -->
+<li class="">Launch Configuration (啟動組態)<!-- -->
 <ul>
-<li>ASG啟動EC2 Instance時的template</li>
-<li>可以包含<!-- -->
+<li class="">ASG啟動EC2 Instance時的template</li>
+<li class="">可以包含<!-- -->
 <ul>
-<li>AMI ID</li>
-<li>Key Pair</li>
-<li>Security Group</li>
-<li>Block Device Mapping</li>
+<li class="">AMI ID</li>
+<li class="">Key Pair</li>
+<li class="">Security Group</li>
+<li class="">Block Device Mapping</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>不會啟動超過quota允許數量的EC2<!-- -->
+<li class="">不會啟動超過quota允許數量的EC2<!-- -->
 <ul>
-<li>ASG設定超過quota時，會以quota上限為準</li>
+<li class="">ASG設定超過quota時，會以quota上限為準</li>
 </ul>
 </li>
-<li>Auto Scaling balance: Best Practice是將Auto Scaling balance跨AZ</li>
-<li>縮減規模時<!-- -->
+<li class="">Auto Scaling balance: Best Practice是將Auto Scaling balance跨AZ</li>
+<li class="">縮減規模時<!-- -->
 <ul>
-<li>需要定義Terminate Policy以決定要自動停掉的是哪些Instance</li>
-<li>可以對特定Instance啟動terminate protect，可以避免Auto Scaling停掉該Instance</li>
-<li>若要被Terminate的instance有資料要保存<!-- -->
+<li class="">需要定義Terminate Policy以決定要自動停掉的是 哪些Instance</li>
+<li class="">可以對特定Instance啟動terminate protect，可以避免Auto Scaling停掉該Instance</li>
+<li class="">若要被Terminate的instance有資料要保存<!-- -->
 <ul>
-<li>務必存在外部服務如S3, RDS, DynamoDB</li>
-<li>Terminate掉的資料是救不回來的</li>
+<li class="">務必存在外部服務如S3, RDS, DynamoDB</li>
+<li class="">Terminate掉的資料是救不回來的</li>
 </ul>
 </li>
-<li>若要被Terminate的instance上有正在服務的user<!-- -->
+<li class="">若要被Terminate的instance上有正在服務的user<!-- -->
 <ul>
-<li>EC2 Auto Scaling Group並不支援terminate wait</li>
-<li>要實現需要透過Route53，Reserve Proxy或Microservice解決</li>
-</ul>
-</li>
+<li class="">EC2 Auto Scaling Group並不支援terminate wait</li>
+<li class="">要實現需要透過Route53，Reserve Proxy或Microservice解決</li>
 </ul>
 </li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="amazon-ec2-auto-scaling-group-asg">Amazon EC2 Auto Scaling Group (ASG)<a href="#amazon-ec2-auto-scaling-group-asg" class="hash-link" aria-label="Direct link to Amazon EC2 Auto Scaling Group (ASG)" title="Direct link to Amazon EC2 Auto Scaling Group (ASG)">​</a></h2>
-<ul>
-<li>包含一組特性相似的EC2 instance的邏輯群組</li>
-<li>刪除ASG會同時停掉該ASG中尚在執行的EC2 instance</li>
-<li>一個ASG只能有一個Launch Configuration，而且建立後不能修改</li>
-<li>ASG內可以加入quota允許數量的EC2<!-- -->
-<ul>
-<li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-limits.html" target="_blank" rel="noopener noreferrer">On-Demand Instance Limit</a></li>
-<li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-limits.html" target="_blank" rel="noopener noreferrer">Spot Instance Limit</a></li>
-</ul>
-</li>
-<li>在ASG建立後被啟動的Instance，不會自動將之前instance的資料複製到新的instance<!-- -->
-<ul>
-<li>若有需要，可以使用<a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html" target="_blank" rel="noopener noreferrer">lifecycle hooks</a>去複製資料</li>
-</ul>
-</li>
-<li>在既有的EC2上create ASG時，不會自動建立AMI</li>
-<li>可以將ASG內的Instance可以設定EC2 Type<!-- -->
-<ul>
-<li>Spot Instance Only: Scale不一定會成功，但能省成本</li>
-<li>Reserved Instance</li>
-<li>On-Daemon Instance</li>
-</ul>
 </li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="lifecycle-hooks">Lifecycle Hooks<a href="#lifecycle-hooks" class="hash-link" aria-label="Direct link to Lifecycle Hooks" title="Direct link to Lifecycle Hooks">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="amazon-ec2-auto-scaling-group-asg">Amazon EC2 Auto Scaling Group (ASG)<a href="#amazon-ec2-auto-scaling-group-asg" class="hash-link" aria-label="Direct link to Amazon EC2 Auto Scaling Group (ASG)" title="Direct link to Amazon EC2 Auto Scaling Group (ASG)" translate="no">​</a></h2>
 <ul>
-<li>EC2 Auto Scaling的instance啟動或停止時採取行動</li>
-<li>有兩種：Launch Hook和Terminate Hook<!-- -->
+<li class="">包含一組特性相似的EC2 instance的邏輯群組</li>
+<li class="">刪除ASG會同時停掉該ASG中尚在執行的EC2 instance</li>
+<li class="">一個ASG只能有一個Launch Configuration，而且建立後不能修改</li>
+<li class="">ASG內可以加入quota允許數量的EC2<!-- -->
 <ul>
-<li>Launch Hook可以用來在base AMI上安裝所需的軟體環境</li>
-<li>Terminate可以在結束instance前收集資料</li>
+<li class=""><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-limits.html" target="_blank" rel="noopener noreferrer" class="">On-Demand Instance Limit</a></li>
+<li class=""><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-limits.html" target="_blank" rel="noopener noreferrer" class="">Spot Instance Limit</a></li>
+</ul>
+</li>
+<li class="">在ASG建立後被啟動的Instance，不會自動將之前instance的資料複製到新的instance<!-- -->
+<ul>
+<li class="">若有需要，可以使用<a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html" target="_blank" rel="noopener noreferrer" class="">lifecycle hooks</a>去複製資料</li>
+</ul>
+</li>
+<li class="">在既有的EC2上create ASG時，不會自動建立AMI</li>
+<li class="">可以將ASG內的Instance可以設定EC2 Type<!-- -->
+<ul>
+<li class="">Spot Instance Only: Scale不一定會成功，但能省成本</li>
+<li class="">Reserved Instance</li>
+<li class="">On-Daemon Instance</li>
 </ul>
 </li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="health-check">Health Check<a href="#health-check" class="hash-link" aria-label="Direct link to Health Check" title="Direct link to Health Check">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="lifecycle-hooks">Lifecycle Hooks<a href="#lifecycle-hooks" class="hash-link" aria-label="Direct link to Lifecycle Hooks" title="Direct link to Lifecycle Hooks" translate="no">​</a></h2>
 <ul>
-<li>EC2 Auto Scaling有自己的<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-system-instance-status-check.html" target="_blank" rel="noopener noreferrer">health checks</a>機制</li>
-<li>如果有掛ELB，也可以支援<a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-healthchecks.html" target="_blank" rel="noopener noreferrer">ELB health checks</a>
+<li class="">EC2 Auto Scaling的instance啟動或停止時採取行動</li>
+<li class="">有兩種：Launch Hook和Terminate Hook<!-- -->
 <ul>
-<li>但ELB對EC2 Auto Scaling不是必要的</li>
-<li>只是有ELB存在的話，使用ELB health check較正確</li>
+<li class="">Launch Hook可以用來在base AMI上安裝所需的軟體環境</li>
+<li class="">Terminate可以在結束instance前收集資料</li>
 </ul>
 </li>
-<li>也支援ALB (Application Load Balancer)或NLB (Network Load Balancer)的health check</li>
-<li>EC2 Auto Scaling自帶的Health Check是可以手動觸發的的<!-- -->
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="health-check">Health Check<a href="#health-check" class="hash-link" aria-label="Direct link to Health Check" title="Direct link to Health Check" translate="no">​</a></h2>
 <ul>
-<li>透過API call: SetInstanceHealth，例如change instance state to UNHEALTHY</li>
-<li>不是指ELB, ALB, NLB的Health Check</li>
+<li class="">EC2 Auto Scaling有自己的<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-system-instance-status-check.html" target="_blank" rel="noopener noreferrer" class="">health checks</a>機制</li>
+<li class="">如果有掛ELB，也可以支援<a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-healthchecks.html" target="_blank" rel="noopener noreferrer" class="">ELB health checks</a>
+<ul>
+<li class="">但ELB對EC2 Auto Scaling不是必要的</li>
+<li class="">只是有ELB存在的話，使用ELB health check較正確</li>
 </ul>
 </li>
-<li>可以suspend暫停health check<!-- -->
+<li class="">也支援ALB (Application Load Balancer)或NLB (Network Load Balancer)的health check</li>
+<li class="">EC2 Auto Scaling自帶的Health Check是可以手動觸發的的<!-- -->
 <ul>
-<li>透過API call: SuspendProcesses和ResumeProcess API</li>
+<li class="">透過API call: SetInstanceHealth，例如change instance state to UNHEALTHY</li>
+<li class="">不是指ELB, ALB, NLB的Health Check</li>
 </ul>
 </li>
-</ul></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/aws/apigw"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">API Gateway</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/aws/dms"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">DMS</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#aws-auto-scaling" class="table-of-contents__link toc-highlight">AWS Auto Scaling</a></li><li><a href="#aws-ec2-auto-scaling" class="table-of-contents__link toc-highlight">AWS EC2 Auto Scaling</a></li><li><a href="#amazon-ec2-auto-scaling-group-asg" class="table-of-contents__link toc-highlight">Amazon EC2 Auto Scaling Group (ASG)</a></li><li><a href="#lifecycle-hooks" class="table-of-contents__link toc-highlight">Lifecycle Hooks</a></li><li><a href="#health-check" class="table-of-contents__link toc-highlight">Health Check</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Mech Tsai.</div></div></div></footer></div>
+<li class="">可以suspend暫停health check<!-- -->
+<ul>
+<li class="">透過API call: SuspendProcesses和ResumeProcess API</li>
+</ul>
+</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/aws/apigw"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">API Gateway</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/aws/dms"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">DMS</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#aws-auto-scaling" class="table-of-contents__link toc-highlight">AWS Auto Scaling</a></li><li><a href="#aws-ec2-auto-scaling" class="table-of-contents__link toc-highlight">AWS EC2 Auto Scaling</a></li><li><a href="#amazon-ec2-auto-scaling-group-asg" class="table-of-contents__link toc-highlight">Amazon EC2 Auto Scaling Group (ASG)</a></li><li><a href="#lifecycle-hooks" class="table-of-contents__link toc-highlight">Lifecycle Hooks</a></li><li><a href="#health-check" class="table-of-contents__link toc-highlight">Health Check</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Mech Tsai.</div></div></div></footer></div>
 <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NT9QMH7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) --></body>
